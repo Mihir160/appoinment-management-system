@@ -7,7 +7,7 @@ import { AuthContext } from '../Context/Authprovider';
 const MyAppointment = () => {
     const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/bookings?email=${user?.email}`;
+    const url = `https://appoinment-management-system-server.vercel.app/bookings?email=${user?.email}`;
     console.log(url)
 
     const { data: bookings = [], refetch } = useQuery({
@@ -24,7 +24,7 @@ const MyAppointment = () => {
     })
 
     const handleDeleteBooking = booking => {
-        fetch(`http://localhost:5000/bookings/${booking._id}`, {
+        fetch(`https://appoinment-management-system-server.vercel.app/bookings/${booking._id}`, {
             method: 'DELETE', 
             headers: {
               
