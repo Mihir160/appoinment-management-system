@@ -34,7 +34,7 @@ const MyAppointment = () => {
         .then(data => {
             if(data.deletedCount > 0){
                 refetch();
-                toast.success(`Doctor ${booking.name} deleted successfully`)
+                toast.success(`Booking deleted successfully`)
             }
         })
     }
